@@ -1,0 +1,14 @@
+# Hungry?
+
+
+## Purpose:
+How many times have you been hungry, but for the life of you, you couldn't think of anything good to eat? Or, you have asked your significant other what they want and all they have to add is: "I don't know, what do you want?" I have noticed in my years of being an indecisive woman that this occurs because of the lack of visual representation. Why search through hundreds of reviews on Yelp! full of awful, static, and poorly-lit photos when you could actively click through <b>Hungry?</b>! When something does look appetizing, after clicking through the randomized list, you can simply click on "Let's Eat!" and you will be directed to a Google search of those types of restaurants near you! 
+
+### Psychology:
+"Mirror" neurons in our brain fire off when we watch someone else partake in an activity. Our bodies have somewhat of the same sensation as the person who is actively participating. (Society of Neuroscience, 2013) Because of this, when it comes to hunger it may be difficult to pinpoint what sounds appetizing. When prompted with animated gifs (graphic interchange format), the user can feel the same sense of hunger-fulfillment and quest after that type of food. Sigmund Freud calls this desire the 'pleasure principle', where we only feel satisfied once our physical needs (hunger, thirst, sex, etc.) are met.
+
+Further, there are several instances where colors can also have an effect on people's hunger. It has been shown that there are 8 different aspects of a menu that can convince people they are hungrier than they might be. (Toast) Several of these have been implemented into my web app to not only find a solution to personal hunger, but possibly suggest more than you wanted originally. <b>Hungry?</b> could be monetized in this manner to allow paid branding from restaurants. Color plays a major factor in the psychology of hunger. According to the American Psychological Association, reds and yellows are prone to increase hunger. If you look at any major food retailer, their logos and marketing are centered around red fields with yellow accents (i.e. McDonald's and Burger King). In this web app, the primary salmon color combines the two color schemes in a way that's soft on the eyes. 
+
+Another hunger stimulator is visual stimuli. Renowned menu engineer Gregg Rapp has shown that food choices with images printed/posted on menus have a 30% more likely chance of being ordered. This statistic is the basis of my web app - creating a video menu of whatever kind of food you could want to sink your teeth into. One of the last few ways where my web app can stimulate hunger is called The Golden Triangle. Our eyes tend to land on the page right around the middle. As we explore more, our eyes go to the top right and then to the left. <b>Hungry?</b> is designed with it's main function buttons in the middle and the gifs themselves draw the eye (in most cases) to the top right.
+
+
