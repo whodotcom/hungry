@@ -1,0 +1,279 @@
+# hungry
+
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- this gives us jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <!-- this is where we are going to put own JavaScript -->
+
+  <script>
+    var urlsObj = {
+      'https://media.giphy.com/media/VO2MiYWK4SRsk/giphy.gif': 'american',
+      'https://media.giphy.com/media/13ghZXHN3vpG7u/giphy.gif': 'donuts',
+      'https://media.giphy.com/media/UgCrYMxLhgPSM/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/xJ3xXy0MHqXhm/giphy.gif': 'american',
+      'https://media.giphy.com/media/har1qe4nZ9tIY/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/ZsVJWYmeBEzf2/giphy.gif': 'pizza',
+      'https://media.giphy.com/media/gLUqyXWSTk1EY/giphy.gif': 'deli',
+      'https://media.giphy.com/media/TsgZadzTY2A9O/giphy.gif': 'pizza',
+      'https://media.giphy.com/media/4KhN2AVAm8aB2/giphy.gif': 'american',
+      'https://media.giphy.com/media/UcyTrm6h09qDe/giphy.gif': 'american',
+      'https://media.giphy.com/media/2Faz6BO8sFxaCrtew/giphy.gif': 'burgerking',
+      'https://media.giphy.com/media/KgiNAupC7pAOI/giphy.gif': 'mexican',
+      'https://media.giphy.com/media/swY9oRLH77mHC/giphy.gif': 'icecream',
+      'https://media.giphy.com/media/PZUUatM4phOWA/giphy.gif': 'icecream',
+      'https://media.giphy.com/media/witesvj1EVgJ2/giphy.gif': 'donuts',
+      'https://media.giphy.com/media/du4D0b0HWgxGg/giphy.gif': 'donuts',
+      'https://media.giphy.com/media/9PjFhaH98aHiE/giphy.gif': 'donuts',
+      'https://media.giphy.com/media/Ugt4jjSlyFaUg/giphy.gif': 'dessert',
+      'https://media.giphy.com/media/jAHlcMYJHSWrK/giphy.gif': 'deli',
+      'https://media.giphy.com/media/2nxTPDEpZjdOo/giphy.gif': 'mcdonalds',
+      'https://media.giphy.com/media/GxR2HJPtAXbMI/giphy.gif': 'burgerking',
+      'https://media.giphy.com/media/13duXCtewq1cpG/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/SxXKRsI6QG3nO/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/pQpG8vf0Fa264/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/12vVdgUJbmlnt6/giphy.gif': 'american',
+      'https://media.giphy.com/media/2tarOZCBFF7hu/giphy.gif': 'buffet',
+      'https://media.giphy.com/media/13n0VouMnyW5Hi/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/11YsAfGkGPUVRm/giphy.gif': 'dessert',
+      'https://media.giphy.com/media/L2BZI48IWTaqA/giphy.gif': 'pizza',
+      'https://media.giphy.com/media/pV3xfUcHONu9y/giphy.gif': 'mexican',
+      'https://media.giphy.com/media/8bsRylt1tNgMU/giphy.gif': 'american',
+      'https://media.giphy.com/media/5n1Aqr2rzx4pq/giphy.gif': 'american',
+      'https://media.giphy.com/media/eSQKNSmg07dHq/giphy.gif': 'italian',
+      'https://media.giphy.com/media/WyVWNxwIs154Y/giphy.gif': 'american',
+      'https://media.giphy.com/media/nAErqE3k2C3fy/giphy.gif': 'dessert',
+      'https://media.giphy.com/media/N9024hXufN9gk/giphy.gif': 'american',
+      'https://media.giphy.com/media/mu0zfFW3Z2UrS/giphy.gif': 'sushi',
+      'https://media.giphy.com/media/gf7VqxHqrqnQI/giphy.gif': 'american',
+      'https://media.giphy.com/media/VFI9mJl4dMDQY/giphy.gif': 'american',
+      'https://media.giphy.com/media/SEO88WjRRHSRW/giphy.gif': 'american',
+      'https://media.giphy.com/media/KiL8gpY3VAbpS/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/LkUXYwFi2PpJK/giphy.gif': 'american',
+      'https://media.giphy.com/media/u4XNXtPokBSo/giphy.gif': 'tacobell',
+      'https://media.giphy.com/media/W9hj1CUzESSju/giphy.gif': 'southern',
+      'https://media.giphy.com/media/kUmhP4CPvRFcc/giphy.gif': 'asian',
+      'https://media.giphy.com/media/LTBFqMmbCkko0/giphy.gif': 'mcdonalds',
+      'https://media.giphy.com/media/CDH0spsSaqQUg/giphy.gif': 'american',
+      'https://media.giphy.com/media/xzNbZa2CbrQiY/giphy.gif': 'milkshakes',
+      'https://media.giphy.com/media/MMdkvVRloFwK4/giphy.gif': 'pizza',
+      'https://media.giphy.com/media/1iTGR8EHBlaOebDO/giphy.gif': 'southern',
+      'https://media.giphy.com/media/aNKnMYh3v3vwc/giphy.gif': 'kfc',
+      'https://media.giphy.com/media/pA19vj9QEXKyA/giphy.gif': 'italian',
+      'https://media.giphy.com/media/tNnOrTKP5pM0o/giphy.gif': 'asian',
+      'https://media.giphy.com/media/8RJ4Pcq2u4O0U/giphy.gif': 'sushi',
+      'https://media.giphy.com/media/CTaNYTatjl24o/giphy.gif': 'icecream',
+      'https://media.giphy.com/media/sOJHNLD39BWEw/giphy.gif': 'american',
+      'https://media.giphy.com/media/7vm0xW7dPRvVe/giphy.gif': 'dessert',
+      'https://media.giphy.com/media/3wogjgqFfr2z6/giphy.gif': 'southern',
+      'https://media.giphy.com/media/6ANrHTBtbq8Zq/giphy.gif': 'dessert',
+      'https://media.giphy.com/media/d2Z5TCjiQrOybCxy/giphy.gif': 'pizza',
+      'https://media.giphy.com/media/GnT6FgqRkVrtS/giphy.gif': 'steak',
+      'https://media.giphy.com/media/n3FOxhVoLiy5y/giphy.gif': 'asian',
+      'https://media.giphy.com/media/pEWMNQoW59qAo/giphy.gif': 'pizza',
+      'http://del.h-cdn.co/assets/16/10/980x490/landscape-1457727984-houseofcards-ribs.gif': 'barbecue',
+      'http://media.giphy.com/media/2XflxzF7fOQD5Pc1AOY/giphy.gif': 'breakfast',
+      'http://i49.tinypic.com/2ag58no.gif': 'barbecue',
+      'https://media.giphy.com/media/MalV5xVlJENPO/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/11vsrRFqhjOcKI/giphy.gif': 'popcorn',
+      'https://media.giphy.com/media/ZMIGybRuJomDC/giphy.gif': 'popcorn',
+      'https://media.giphy.com/media/9XyJznF2lnWNy/giphy.gif': 'popcorn',
+      'https://media.giphy.com/media/groMtmNx4bya4/giphy.gif': 'deli',
+      'https://media.giphy.com/media/QgXU83mKEuwnu/giphy.gif': 'deli',
+      'https://media.giphy.com/media/pAaz7dWI0sCs0/giphy.gif': 'deli',
+      'https://media.giphy.com/media/Jo78U8DMl2szm/giphy.gif': 'breakfast',
+      'https://media.giphy.com/media/CzHGGxAIS0qSA/giphy.gif': 'mexican',
+      'https://media.giphy.com/media/fo6vEEeAutQWI/giphy.gif': 'deli',
+      'https://media.giphy.com/media/7lDKxZnag09k4/giphy.gif': 'deli',
+      'https://media.giphy.com/media/Pqyf10bxUAS4M/giphy.gif': 'icecream',
+      'https://media.giphy.com/media/9dTzXZY6qncBO/giphy.gif': 'steakhouse',
+      'https://33.media.tumblr.com/6604d3714fc59613632996c437efce28/tumblr_inline_o3cbdzDxC61tzwkwy_500.gif': 'asian',
+      'https://33.media.tumblr.com/d367462e8e1027e7993a765708867101/tumblr_inline_o3cbdyrNTB1tzwkwy_500.gif': 'asian',
+
+
+
+
+
+    };
+
+    var urls = Object.keys(urlsObj);
+
+    // We'll declare index here so it's the same for both functions!
+    var index;
+    $('document').ready(function() {
+      index = Math.ceil(Math.random() * urls.length) - 1;
+      // We get the url at that index!
+      var url = urls[index];
+      $('body').css('background-image', 'url(' + url + ')')
+      $('#myHappyButton').click(function() {
+        // We set the index to a random number here.
+        index = Math.ceil(Math.random() * urls.length) - 1;
+        // We get the url at that index!
+        var url = urls[index];
+        $('body').css('background-image', 'url(' + url + ')')
+      });
+
+      $('#mySadButton').click(function() {
+        // Delete the element at the index we're currently at.
+        urls.splice(index, 1);
+
+        index = Math.ceil(Math.random() * urls.length) - 1;
+        // We get the url at that index!
+        var url = urls[index];
+        $('body').css('background-image', 'url(' + url + ')')
+
+      });
+
+      $('#myPoopButton').click(function() {
+        var category = urlsObj[urls[index]];
+        if (category === 'american') {
+          window.open('https://www.google.com/search?q=American%20cuisine%20near%20me');
+        } else if (category === 'mexican') {
+          window.open('https://www.google.com/search?q=Mexican%20cuisine%20near%20me');
+        } else if (category === 'donuts') {
+          window.open('https://www.google.com/search?q=Donuts%20near%20me');
+        } else if (category === 'breakfast') {
+          window.open('https://www.google.com/search?q=Breakfast%20near%20me');
+        } else if (category === 'sushi') {
+          window.open('https://www.google.com/search?q=Sushi%20near%20me');
+        } else if (category === 'southern') {
+          window.open('https://www.google.com/search?q=Southern%20food%20near%20me');
+        } else if (category === 'dessert') {
+          window.open('https://www.google.com/search?q=Dessert%20near%20me');
+        } else if (category === 'pizza') {
+          window.open('https://www.google.com/search?q=Pizza%20near%20me');
+        } else if (category === 'buffet') {
+          window.open('https://www.google.com/search?q=Buffet%20near%20me');
+        } else if (category === 'deli') {
+          window.open('https://www.google.com/search?q=Delis%20subs%20near%20me');
+        } else if (category === 'milkshakes') {
+          window.open('https://www.google.com/search?q=Milkshakes%20near%20me');
+        } else if (category === 'steak') {
+          window.open('https://www.google.com/search?q=Steakhouse%20near%20me');
+        } else if (category === 'italian') {
+          window.open('https://www.google.com/search?q=Italian%20cuisine%20near%20me');
+        } else if (category === 'tacobell') {
+          window.open('https://www.google.com/search?q=Taco%20Bell%20near%20me');
+        } else if (category === 'mcdonalds') {
+          window.open('https://www.google.com/search?q=McDonalds%20near%20me');
+        } else if (category === 'burgerking') {
+          window.open('https://www.google.com/search?q=Burger%20King%20near%20me');
+        } else if (category === 'kfc') {
+          window.open('https://www.google.com/search?q=KFC%20near%20me');
+        } else if (category === 'barbecue') {
+          window.open('https://www.google.com/search?q=Barbecue%20near%20me');
+        } else if (category === 'popcorn') {
+          window.open('https://www.google.com/search?q=Movie%20Theatres%20near%20me');
+        } else if (category === 'icecream') {
+          window.open('https://www.google.com/search?q=Icecream%20near%20me');
+        }
+        else if (category === 'asian') {
+          window.open('https://www.google.com/search?q=Asian%20cuisine%20near%20me');
+        }
+
+
+      });
+    });
+  </script>
+
+  <style>
+    body,
+    a:hover {}
+
+    body {
+      background-color: salmon;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .centerify {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .centerify-item {
+      flex: 1;
+    }
+
+    h1 {
+      color: white;
+      font-family: 'Lilita One';
+      font-size: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container centerify">
+    <div class="centerify-item">
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col s12">
+          <h1>HUNGRY?</h1>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <p><a id="myHappyButton" class="waves-effect waves-light btn blue"><i class="material-icons left">arrow_forward</i>What Else?</a></p>
+      </div>
+
+      <div class="col s12 m4">
+        <p><a id="mySadButton" class="waves-effect waves-light btn red"><i class="material-icons left">sentiment_very_dissatisfied</i>Not Today!</a></p>
+      </div>
+      <div class="col s12 m4">
+        <p><a id="myPoopButton" class="waves-effect waves-light btn green"><i class="material-icons left">place</i>Let's Eat!</a></p>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>
